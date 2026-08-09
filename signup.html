@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get Started | Digital Boost Marketing Agency</title>
+
+    <meta name="description"
+          content="Contact Digital Boost Marketing Agency and start growing your business online.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .signup-section {
+            min-height: 700px;
+            padding: 80px 7%;
+            background: #f5fff8;
+        }
+
+        .signup-container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+        }
+
+        .signup-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .signup-heading p {
+            color: #18a957;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .signup-heading h1 {
+            font-size: 42px;
+            margin: 10px 0;
+        }
+
+        .signup-heading span {
+            color: #666;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #18a957;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            margin-top: 25px;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            background: #18a957;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #128c48;
+        }
+
+        .form-note {
+            text-align: center;
+            color: #777;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+
+            .signup-container {
+                padding: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: auto;
+            }
+
+            .signup-heading h1 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <img
+                src="images/logo.png"
+                alt="Digital Boost Logo"
+            >
+
+            <span>Digital Boost</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="signup.html" class="signup-btn">
+                Get Started
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- SIGNUP SECTION -->
+
+    <section class="signup-section">
+
+        <div class="signup-container">
+
+
+            <div class="signup-heading">
+
+                <p>GET STARTED</p>
+
+                <h1>
+                    Let's Grow Your Business
+                </h1>
+
+                <span>
+                    Fill out the form and tell us about your business.
+                </span>
+
+            </div>
+
+
+
+            <!-- FORM -->
+
+            <form
+                action="https://formspree.io/f/YOUR_FORM_ID"
+                method="POST"
+            >
+
+
+                <div class="form-grid">
+
+
+                    <!-- NAME -->
+
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- WHATSAPP -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            WhatsApp Number *
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="+92 300 1234567"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address *
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="your@email.com"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- BUSINESS -->
+
+                    <div class="form-group">
+
+                        <label for="business">
+                            Business Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="business"
+                            name="business"
+                            placeholder="Your business name"
+                        >
+
+                    </div>
+
+
+
+                    <!-- SERVICE -->
+
+                    <div class="form-group">
+
+                        <label for="service">
+                            Select Service *
+                        </label>
+
+                        <select
+                            id="service"
+                            name="service"
+                            required
+                        >
+
+                            <option value="">
+                                Select a service
+                            </option>
+
+                            <option value="Social Media Marketing">
+                                Social Media Marketing
+                            </option>
+
+                            <option value="Meta Ads">
+                                Meta Ads
+                            </option>
+
+                            <option value="Google Ads">
+                                Google Ads
+                            </option>
+
+                            <option value="SEO">
+                                SEO
+                            </option>
+
+                            <option value="Graphic Design">
+                                Graphic Design
+                            </option>
+
+                            <option value="Website Development">
+                                Website Development
+                            </option>
+
+                            <option value="Content Creation">
+                                Content Creation
+                            </option>
+
+                            <option value="Lead Generation">
+                                Lead Generation
+                            </option>
+
+                            <option value="Branding">
+                                Branding
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- BUDGET -->
+
+                    <div class="form-group">
+
+                        <label for="budget">
+                            Monthly Budget
+                        </label>
+
+                        <select
+                            id="budget"
+                            name="budget"
+                        >
+
+                            <option value="">
+                                Select budget
+                            </option>
+
+                            <option value="Under Rs. 25,000">
+                                Under Rs. 25,000
+                            </option>
+
+                            <option value="Rs. 25,000 - 50,000">
+                                Rs. 25,000 - 50,000
+                            </option>
+
+                            <option value="Rs. 50,000 - 100,000">
+                                Rs. 50,000 - 100,000
+                            </option>
+
+                            <option value="Rs. 100,000+">
+                                Rs. 100,000+
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- MESSAGE -->
+
+                    <div class="form-group full">
+
+                        <label for="message">
+                            Tell Us About Your Business *
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Tell us about your business, goals and what you need help with..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="submit-btn"
+                >
+                    Submit Request
+                </button>
+
+
+                <p class="form-note">
+                    Your information will be kept private and secure.
+                </p>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- WHATSAPP -->
+
+    <a
+        href="https://wa.me/923000000000"
+        class="whatsapp-floating"
+        target="_blank"
+    >
+        WhatsApp
+    </a>
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>
+            Digital Boost Marketing Agency
+        </h3>
+
+        <p>
+            © 2026 Digital Boost. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
