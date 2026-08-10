@@ -1,22 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ممکن ہے Contact section index.html کے اندر موجود ہو، اسی لیے الگ contact.html نہیں ہے۔
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+STEP 2
 
-    <title>Get Started | Digital Boost</title>
+اب GitHub میں:
 
-    <link rel="stylesheet" href="style.css">
+index.html پر click کریں → پھر ✏️ Edit پر click کریں۔
 
-</head>
+اس کے بعد پورا code یہاں paste کر دیں۔
 
-<body>
+اگر code بہت زیادہ ہے تو کوئی مسئلہ نہیں، پورا index.html code بھیج دیں۔ میں اس میں Contact Form تلاش کرکے آپ کو صرف ضروری حصہ بتاؤں گا۔
 
+👉 اب صرف index.html کھولیں اور اس کا code یہاں بھیجیں۔
+
+<title>Digital Boost Marketing Agency</title>
+<meta name="description" content="Digital Boost Marketing Agency - Social Media Marketing, Meta Ads, Google Ads, SEO and more.">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- HEADER -->
 <header class="header">
 
     <div class="logo">
-        <img src="logo.png" alt="Digital Boost Logo">
+        <img src="images/logo.png" alt="Digital Boost Logo">
         <span>Digital Boost</span>
     </div>
 
@@ -30,206 +35,190 @@
 </header>
 
 
-<section class="signup-section">
+<!-- HERO SECTION -->
+<section class="hero">
 
-    <div class="signup-container">
+    <div class="hero-content">
 
-        <div class="signup-heading">
+        <p class="small-title">DIGITAL BOOST MARKETING AGENCY</p>
 
-            <p>GET STARTED</p>
+        <h1>
+            Grow Your Business
+            <span>With Digital Marketing</span>
+        </h1>
 
-            <h1>Let's Grow Your Business</h1>
+        <p>
+            We help businesses grow online with powerful digital
+            marketing strategies, creative content and performance advertising.
+        </p>
 
-            <span>
-                Fill out the form and our team will contact you.
-            </span>
+        <div class="hero-buttons">
+            <a href="signup.html" class="primary-btn">Get Started</a>
 
+            <a href="https://wa.me/923252010866 class="whatsapp-btn">
+                WhatsApp Us
+            </a>
         </div>
 
+    </div>
 
-        <!-- WORKING FORMSPREE FORM -->
+    <div class="hero-image">
 
-        <form
-            action="https://formspree.io/f/xgawojwd"
-            method="POST"
-        >
-
-            <div class="form-grid">
-
-
-                <div class="form-group">
-
-                    <label>Full Name *</label>
-
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>WhatsApp Number *</label>
-
-                    <input
-                        type="tel"
-                        name="phone"
-                        placeholder="+92 300 1234567"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Email Address *</label>
-
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="your@email.com"
-                        required
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Business Name</label>
-
-                    <input
-                        type="text"
-                        name="business"
-                        placeholder="Your business name"
-                    >
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Select Service *</label>
-
-                    <select name="service" required>
-
-                        <option value="">
-                            Select a service
-                        </option>
-
-                        <option value="Social Media Marketing">
-                            Social Media Marketing
-                        </option>
-
-                        <option value="Meta Ads">
-                            Meta Ads
-                        </option>
-
-                        <option value="Google Ads">
-                            Google Ads
-                        </option>
-
-                        <option value="SEO">
-                            SEO
-                        </option>
-
-                        <option value="Graphic Design">
-                            Graphic Design
-                        </option>
-
-                        <option value="Website Development">
-                            Website Development
-                        </option>
-
-                        <option value="Content Creation">
-                            Content Creation
-                        </option>
-
-                        <option value="Lead Generation">
-                            Lead Generation
-                        </option>
-
-                        <option value="Branding">
-                            Branding
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group">
-
-                    <label>Monthly Budget</label>
-
-                    <select name="budget">
-
-                        <option value="">
-                            Select budget
-                        </option>
-
-                        <option value="Under Rs. 25,000">
-                            Under Rs. 25,000
-                        </option>
-
-                        <option value="Rs. 25,000 - 50,000">
-                            Rs. 25,000 - 50,000
-                        </option>
-
-                        <option value="Rs. 50,000 - 100,000">
-                            Rs. 50,000 - 100,000
-                        </option>
-
-                        <option value="Rs. 100,000+">
-                            Rs. 100,000+
-                        </option>
-
-                    </select>
-
-                </div>
-
-
-                <div class="form-group full">
-
-                    <label>Tell Us About Your Business *</label>
-
-                    <textarea
-                        name="message"
-                        placeholder="Tell us about your business and your goals..."
-                        required
-                    ></textarea>
-
-                </div>
-
-            </div>
-
-
-            <button
-                type="submit"
-                class="submit-btn"
-            >
-                Submit Request
-            </button>
-
-
-            <p class="form-note">
-                Your information is secure and private.
-            </p>
-
-        </form>
+        <img src="images/hero.jpg" alt="Digital Marketing">
 
     </div>
 
 </section>
 
 
+<!-- SERVICES -->
+<section class="services">
+
+    <div class="section-title">
+
+        <p>WHAT WE DO</p>
+
+        <h2>Our Digital Marketing Services</h2>
+
+        <span>
+            Everything your business needs to grow online.
+        </span>
+
+    </div>
+
+
+    <div class="service-container">
+
+
+        <!-- SERVICE 1 -->
+        <div class="service-card">
+
+            <img src="images/social-media.jpg" alt="Social Media Marketing">
+
+            <h3>Social Media Marketing</h3>
+
+            <p>
+                Build your brand and grow your audience
+                across social media platforms.
+            </p>
+
+            <a href="signup.html">Get Started →</a>
+
+        </div>
+
+
+        <!-- SERVICE 2 -->
+        <div class="service-card">
+
+            <img src="images/meta-ads.jpg" alt="Meta Ads">
+
+            <h3>Meta Ads</h3>
+
+            <p>
+                Reach the right customers with powerful
+                Facebook and Instagram advertising.
+            </p>
+
+            <a href="signup.html">Get Started →</a>
+
+        </div>
+
+
+        <!-- SERVICE 3 -->
+        <div class="service-card">
+
+            <img src="images/seo.jpg" alt="SEO">
+
+            <h3>SEO</h3>
+
+            <p>
+                Improve your Google rankings and generate
+                more organic traffic.
+            </p>
+
+            <a href="signup.html">Get Started →</a>
+
+        </div>
+
+
+        <!-- SERVICE 4 -->
+        <div class="service-card">
+
+            <img src="images/google-ads.jpg" alt="Google Ads">
+
+            <h3>Google Ads</h3>
+
+            <p>
+                Generate targeted traffic, leads and sales
+                with Google advertising.
+            </p>
+
+            <a href="signup.html">Get Started →</a>
+
+        </div>
+
+
+        <!-- SERVICE 5 -->
+        <div class="service-card">
+
+            <img src="images/graphic-design.jpg" alt="Graphic Design">
+
+            <h3>Graphic Design</h3>
+
+            <p>
+                Professional and creative designs that
+                make your brand stand out.
+            </p>
+
+            <a href="signup.html">Get Started →</a>
+
+        </div>
+
+
+        <!-- SERVICE 6 -->
+        <div class="service-card">
+
+            <img src="images/website.jpg" alt="Website Development">
+
+            <h3>Website Development</h3>
+
+            <p>
+                Modern, fast and responsive websites
+                for your business.
+            </p>
+
+            <a href="signup.html">Get Started →</a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="why-us">
+
+    <div>
+
+        <p>WHY DIGITAL BOOST?</p>
+
+        <h2>We Help Your Business Grow</h2>
+
+        <p>
+            Our goal is to help businesses increase their
+            online presence, generate quality leads and
+            achieve better results through digital marketing.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
 <a
-    href="https://wa.me/923000000000"
+    href="https://wa.me/923252010866"
     class="whatsapp-floating"
     target="_blank"
 >
@@ -237,6 +226,7 @@
 </a>
 
 
+<!-- FOOTER -->
 <footer>
 
     <h3>Digital Boost Marketing Agency</h3>
@@ -247,5 +237,45 @@
 
 </footer>
 
-</body>
-</html>
+
+جی 👍 اب بات بالکل clear ہے۔
+
+آپ کے index.html میں Contact Form موجود نہیں ہے۔ یہاں صرف Get Started → signup.html جا رہا ہے۔
+
+یعنی جس Send Enquiry فارم کو ہم test کر رہے تھے، وہ غالباً signup.html کے اندر ہے۔
+
+STEP 3 — اب signup.html کھولیں
+
+GitHub میں:
+
+DBM-Agency1 → signup.html → ✏️ Edit
+
+پھر اس کا پورا code یہاں paste کریں۔
+
+میں اسی میں:
+
+✅ Project Details validation
+✅ Required fields
+✅ Send Enquiry button
+✅ Formspree submission
+✅ Success message
+✅ Email notification
+
+سب check کروں گا۔
+
+ایک چھوٹی غلطی بھی نظر آئی ہے ⚠️
+
+آپ کے index.html میں یہ لائن غلط ہے:
+
+صحیح لائن یہ ہونی چاہیے:
+
+<a href="https://wa.me/923252010866" class="whatsapp-btn">
+
+لیکن ابھی اسے change نہ کریں۔ پہلے signup.html کا code بھیجیں تاکہ ہم صرف Form والا مسئلہ حل کریں۔
+
+👉 اب signup.html کا code یہاں paste کریں۔
+
+Chat paused until usage resets at 2:25 PM
+You’ve reached the limit for chats that include files or images. Start a new text-only chat or upgrade to continue now.
+New chat
+Upgrade
