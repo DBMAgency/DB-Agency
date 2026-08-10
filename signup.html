@@ -1,235 +1,691 @@
-ممکن ہے Contact section index.html کے اندر موجود ہو، اسی لیے الگ contact.html نہیں ہے۔
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-STEP 2
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-اب GitHub میں:
+    <title>Get Started | Digital Boost Marketing Agency</title>
 
-index.html پر click کریں → پھر ✏️ Edit پر click کریں۔
+    <meta name="description"
+          content="Get started with Digital Boost Marketing Agency. Send us your project details and grow your business online.">
 
-اس کے بعد پورا code یہاں paste کر دیں۔
+    <style>
 
-اگر code بہت زیادہ ہے تو کوئی مسئلہ نہیں، پورا index.html code بھیج دیں۔ میں اس میں Contact Form تلاش کرکے آپ کو صرف ضروری حصہ بتاؤں گا۔
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-👉 اب صرف index.html کھولیں اور اس کا code یہاں بھیجیں۔
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f7f5;
+            color: #111;
+        }
 
-<title>Digital Boost Marketing Agency</title>
-<meta name="description" content="Digital Boost Marketing Agency - Social Media Marketing, Meta Ads, Google Ads, SEO and more.">
+        /* HEADER */
 
-<link rel="stylesheet" href="style.css">
+        .header {
+            width: 100%;
+            background: #000;
+            padding: 15px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .logo img {
+            width: 45px;
+            height: 45px;
+            object-fit: contain;
+        }
+
+        .header nav {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .header nav a:hover {
+            color: #00c853;
+        }
+
+        .signup-btn {
+            background: #00c853;
+            padding: 10px 18px;
+            border-radius: 6px;
+            color: #000 !important;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px 35px;
+        }
+
+        .hero p {
+            color: #00a844;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #00b84f;
+        }
+
+        .hero .subtitle {
+            color: #666;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* FORM SECTION */
+
+        .form-section {
+            width: 92%;
+            max-width: 900px;
+            margin: 20px auto 70px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-title h2 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .form-title p {
+            color: #777;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .form-group label span {
+            color: red;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #d5d5d5;
+            border-radius: 7px;
+            font-size: 15px;
+            outline: none;
+            background: #fff;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #00c853;
+            box-shadow: 0 0 0 2px rgba(0,200,83,0.10);
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            border: none;
+            background: #00c853;
+            color: #000;
+            padding: 16px;
+            font-size: 17px;
+            font-weight: bold;
+            border-radius: 7px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #00a844;
+            color: #fff;
+        }
+
+        .submit-btn:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+
+        /* SUCCESS MESSAGE */
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f8ee;
+            border: 1px solid #00c853;
+            color: #08752f;
+            border-radius: 7px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .error-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff0f0;
+            border: 1px solid #e00000;
+            color: #b00000;
+            border-radius: 7px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* WHATSAPP */
+
+        .whatsapp-box {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .whatsapp-box p {
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 7px;
+            font-weight: bold;
+        }
+
+        .whatsapp-btn:hover {
+            background: #1da851;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+            color: #00c853;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .header {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .header nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .hero {
+                padding-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .form-section {
+                width: 94%;
+                padding: 25px 18px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
 
 <!-- HEADER -->
+
 <header class="header">
 
     <div class="logo">
-        <img src="images/logo.png" alt="Digital Boost Logo">
+
+        <img src="images/logo.png"
+             alt="Digital Boost Logo">
+
         <span>Digital Boost</span>
+
     </div>
 
+
     <nav>
+
         <a href="index.html">Home</a>
+
         <a href="about.html">About Us</a>
+
         <a href="services.html">Services</a>
-        <a href="signup.html" class="signup-btn">Get Started</a>
+
+        <a href="signup.html" class="signup-btn">
+            Get Started
+        </a>
+
     </nav>
 
 </header>
 
 
-<!-- HERO SECTION -->
+<!-- HERO -->
+
 <section class="hero">
 
-    <div class="hero-content">
+    <p>DIGITAL BOOST MARKETING AGENCY</p>
 
-        <p class="small-title">DIGITAL BOOST MARKETING AGENCY</p>
+    <h1>
+        Let's Grow Your
+        <span>Business</span>
+    </h1>
 
-        <h1>
-            Grow Your Business
-            <span>With Digital Marketing</span>
-        </h1>
+    <div class="subtitle">
 
-        <p>
-            We help businesses grow online with powerful digital
-            marketing strategies, creative content and performance advertising.
-        </p>
-
-        <div class="hero-buttons">
-            <a href="signup.html" class="primary-btn">Get Started</a>
-
-            <a href="https://wa.me/923252010866 class="whatsapp-btn">
-                WhatsApp Us
-            </a>
-        </div>
-
-    </div>
-
-    <div class="hero-image">
-
-        <img src="images/hero.jpg" alt="Digital Marketing">
+        Tell us about your business and project.
+        Our team will review your enquiry and contact you
+        with the next steps.
 
     </div>
 
 </section>
 
 
-<!-- SERVICES -->
-<section class="services">
+<!-- CONTACT FORM -->
 
-    <div class="section-title">
+<section class="form-section">
 
-        <p>WHAT WE DO</p>
+    <div class="form-title">
 
-        <h2>Our Digital Marketing Services</h2>
-
-        <span>
-            Everything your business needs to grow online.
-        </span>
-
-    </div>
-
-
-    <div class="service-container">
-
-
-        <!-- SERVICE 1 -->
-        <div class="service-card">
-
-            <img src="images/social-media.jpg" alt="Social Media Marketing">
-
-            <h3>Social Media Marketing</h3>
-
-            <p>
-                Build your brand and grow your audience
-                across social media platforms.
-            </p>
-
-            <a href="signup.html">Get Started →</a>
-
-        </div>
-
-
-        <!-- SERVICE 2 -->
-        <div class="service-card">
-
-            <img src="images/meta-ads.jpg" alt="Meta Ads">
-
-            <h3>Meta Ads</h3>
-
-            <p>
-                Reach the right customers with powerful
-                Facebook and Instagram advertising.
-            </p>
-
-            <a href="signup.html">Get Started →</a>
-
-        </div>
-
-
-        <!-- SERVICE 3 -->
-        <div class="service-card">
-
-            <img src="images/seo.jpg" alt="SEO">
-
-            <h3>SEO</h3>
-
-            <p>
-                Improve your Google rankings and generate
-                more organic traffic.
-            </p>
-
-            <a href="signup.html">Get Started →</a>
-
-        </div>
-
-
-        <!-- SERVICE 4 -->
-        <div class="service-card">
-
-            <img src="images/google-ads.jpg" alt="Google Ads">
-
-            <h3>Google Ads</h3>
-
-            <p>
-                Generate targeted traffic, leads and sales
-                with Google advertising.
-            </p>
-
-            <a href="signup.html">Get Started →</a>
-
-        </div>
-
-
-        <!-- SERVICE 5 -->
-        <div class="service-card">
-
-            <img src="images/graphic-design.jpg" alt="Graphic Design">
-
-            <h3>Graphic Design</h3>
-
-            <p>
-                Professional and creative designs that
-                make your brand stand out.
-            </p>
-
-            <a href="signup.html">Get Started →</a>
-
-        </div>
-
-
-        <!-- SERVICE 6 -->
-        <div class="service-card">
-
-            <img src="images/website.jpg" alt="Website Development">
-
-            <h3>Website Development</h3>
-
-            <p>
-                Modern, fast and responsive websites
-                for your business.
-            </p>
-
-            <a href="signup.html">Get Started →</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- WHY CHOOSE US -->
-<section class="why-us">
-
-    <div>
-
-        <p>WHY DIGITAL BOOST?</p>
-
-        <h2>We Help Your Business Grow</h2>
+        <h2>Send Your Enquiry</h2>
 
         <p>
-            Our goal is to help businesses increase their
-            online presence, generate quality leads and
-            achieve better results through digital marketing.
+            Fill in the form below and we'll get back to you.
         </p>
 
     </div>
 
+
+    <!-- FORMSPREE FORM -->
+
+    <form
+        id="enquiryForm"
+        action="https://formspree.io/f/xgawojwd"
+        method="POST"
+    >
+
+        <div class="form-row">
+
+            <!-- NAME -->
+
+            <div class="form-group">
+
+                <label for="name">
+                    Full Name <span>*</span>
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+            </div>
+
+
+            <!-- EMAIL -->
+
+            <div class="form-group">
+
+                <label for="email">
+                    Email Address <span>*</span>
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <!-- PHONE -->
+
+            <div class="form-group">
+
+                <label for="phone">
+                    WhatsApp / Phone <span>*</span>
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="e.g. 03252010866"
+                    required
+                >
+
+            </div>
+
+
+            <!-- BUSINESS -->
+
+            <div class="form-group">
+
+                <label for="business">
+                    Business Name
+                </label>
+
+                <input
+                    type="text"
+                    id="business"
+                    name="business"
+                    placeholder="Enter your business name"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- SERVICE -->
+
+        <div class="form-group">
+
+            <label for="service">
+                Service Required <span>*</span>
+            </label>
+
+            <select
+                id="service"
+                name="service"
+                required
+            >
+
+                <option value="">
+                    Select a service
+                </option>
+
+                <option value="Social Media Marketing">
+                    Social Media Marketing
+                </option>
+
+                <option value="Meta Ads">
+                    Meta Ads
+                </option>
+
+                <option value="Google Ads">
+                    Google Ads
+                </option>
+
+                <option value="SEO">
+                    SEO
+                </option>
+
+                <option value="Graphic Design">
+                    Graphic Design
+                </option>
+
+                <option value="Website Development">
+                    Website Development
+                </option>
+
+                <option value="Content Creation">
+                    Content Creation
+                </option>
+
+                <option value="Lead Generation">
+                    Lead Generation
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- BUDGET -->
+
+        <div class="form-group">
+
+            <label for="budget">
+                Estimated Budget
+            </label>
+
+            <select
+                id="budget"
+                name="budget"
+            >
+
+                <option value="">
+                    Select your budget
+                </option>
+
+                <option value="Under Rs 25,000">
+                    Under Rs 25,000
+                </option>
+
+                <option value="Rs 25,000 - Rs 50,000">
+                    Rs 25,000 - Rs 50,000
+                </option>
+
+                <option value="Rs 50,000 - Rs 100,000">
+                    Rs 50,000 - Rs 100,000
+                </option>
+
+                <option value="Rs 100,000+">
+                    Rs 100,000+
+                </option>
+
+                <option value="Not Sure">
+                    Not Sure
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PROJECT DETAILS -->
+
+        <div class="form-group">
+
+            <label for="details">
+                Project Details <span>*</span>
+            </label>
+
+            <textarea
+                id="details"
+                name="project_details"
+                placeholder="Tell us about your business, goals, target audience and what you need help with..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- EXTRA MESSAGE -->
+
+        <div class="form-group">
+
+            <label for="message">
+                Additional Message
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                placeholder="Write any additional information here..."
+            ></textarea>
+
+        </div>
+
+
+        <!-- SUBJECT -->
+
+        <input
+            type="hidden"
+            name="_subject"
+            value="New Enquiry - Digital Boost Marketing Agency"
+        >
+
+
+        <!-- SUBMIT -->
+
+        <button
+            type="submit"
+            class="submit-btn"
+            id="submitBtn"
+        >
+            Send Enquiry
+        </button>
+
+
+        <!-- SUCCESS -->
+
+        <div
+            class="success-message"
+            id="successMessage"
+        >
+            ✅ Thank you! Your enquiry has been sent successfully.
+            We will contact you soon.
+        </div>
+
+
+        <!-- ERROR -->
+
+        <div
+            class="error-message"
+            id="errorMessage"
+        >
+            ❌ Something went wrong. Please try again or contact us on WhatsApp.
+        </div>
+
+    </form>
+
+
+    <!-- WHATSAPP -->
+
+    <div class="whatsapp-box">
+
+        <p>
+            Need a quick response? Contact us directly on WhatsApp.
+        </p>
+
+        <a
+            href="https://wa.me/923252010866"
+            class="whatsapp-btn"
+            target="_blank"
+        >
+            💬 WhatsApp Us
+        </a>
+
+    </div>
+
 </section>
-
-
-<!-- WHATSAPP FLOATING BUTTON -->
-<a
-    href="https://wa.me/923252010866"
-    class="whatsapp-floating"
-    target="_blank"
->
-    WhatsApp
-</a>
 
 
 <!-- FOOTER -->
+
 <footer>
 
-    <h3>Digital Boost Marketing Agency</h3>
+    <h3>
+        Digital Boost Marketing Agency
+    </h3>
 
     <p>
         © 2026 Digital Boost. All Rights Reserved.
@@ -238,44 +694,89 @@ index.html پر click کریں → پھر ✏️ Edit پر click کریں۔
 </footer>
 
 
-جی 👍 اب بات بالکل clear ہے۔
+<!-- FORM SCRIPT -->
 
-آپ کے index.html میں Contact Form موجود نہیں ہے۔ یہاں صرف Get Started → signup.html جا رہا ہے۔
+<script>
 
-یعنی جس Send Enquiry فارم کو ہم test کر رہے تھے، وہ غالباً signup.html کے اندر ہے۔
+    const form = document.getElementById("enquiryForm");
 
-STEP 3 — اب signup.html کھولیں
+    const submitBtn =
+        document.getElementById("submitBtn");
 
-GitHub میں:
+    const successMessage =
+        document.getElementById("successMessage");
 
-DBM-Agency1 → signup.html → ✏️ Edit
+    const errorMessage =
+        document.getElementById("errorMessage");
 
-پھر اس کا پورا code یہاں paste کریں۔
 
-میں اسی میں:
+    form.addEventListener("submit", async function(event) {
 
-✅ Project Details validation
-✅ Required fields
-✅ Send Enquiry button
-✅ Formspree submission
-✅ Success message
-✅ Email notification
+        event.preventDefault();
 
-سب check کروں گا۔
 
-ایک چھوٹی غلطی بھی نظر آئی ہے ⚠️
+        submitBtn.disabled = true;
 
-آپ کے index.html میں یہ لائن غلط ہے:
+        submitBtn.textContent = "Sending...";
 
-صحیح لائن یہ ہونی چاہیے:
+        successMessage.style.display = "none";
 
-<a href="https://wa.me/923252010866" class="whatsapp-btn">
+        errorMessage.style.display = "none";
 
-لیکن ابھی اسے change نہ کریں۔ پہلے signup.html کا code بھیجیں تاکہ ہم صرف Form والا مسئلہ حل کریں۔
 
-👉 اب signup.html کا code یہاں paste کریں۔
+        const formData = new FormData(form);
 
-Chat paused until usage resets at 2:25 PM
-You’ve reached the limit for chats that include files or images. Start a new text-only chat or upgrade to continue now.
-New chat
-Upgrade
+
+        try {
+
+            const response = await fetch(
+                form.action,
+                {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                }
+            );
+
+
+            if (response.ok) {
+
+                form.reset();
+
+                successMessage.style.display = "block";
+
+                submitBtn.disabled = false;
+
+                submitBtn.textContent = "Send Enquiry";
+
+                successMessage.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+
+            } else {
+
+                throw new Error("Form submission failed");
+
+            }
+
+        } catch (error) {
+
+            errorMessage.style.display = "block";
+
+            submitBtn.disabled = false;
+
+            submitBtn.textContent = "Send Enquiry";
+
+        }
+
+    });
+
+</script>
+
+
+</body>
+</html>
+```
